@@ -2,8 +2,9 @@
 <h2>(<%= @pictures.length %>) Total</h2>
 
 <%= link_to "New Picture", "/pictures/new" %>
-
-<% @pictures.each do |picture| %>
-  <p><%= picture.title %>, <%= picture.artist %></p>
-  <img src="<%= picture.url %>">
-<% end %>
+<div class="picture">
+  <% @pictures.each do |picture| %>
+    <p><%= picture.title %>, <%= picture.artist %></p>
+    <%= link_to image_tag(picture.url, class: "picture"), picture %>
+  <% end %>
+</div>
