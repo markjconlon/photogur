@@ -19,6 +19,7 @@ class PicturesController < ApplicationController
      redirect_to pictures_url
    else
      # otherwise render the view associated with the action :new (i.e. new.html.erb)
+    #  flash.now[:error]
      render :new
    end
   end
